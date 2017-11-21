@@ -106,7 +106,8 @@ void NumberList::deleteNode(double num) {
         }
         if(nodePtr)
         {
-            prevNode->next = nodePtr->next;
+            if(prevNode)
+                prevNode->next = nodePtr->next;
             delete nodePtr;
         }
     }
